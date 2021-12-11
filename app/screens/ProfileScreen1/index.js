@@ -17,6 +17,20 @@ function ProfileScreen1({ navigation }) {
       >
         {({ pressd }) => <Text style={styles.txtBtn}>Go to Profile 2</Text>}
       </Pressable>
+
+      <Pressable
+        onPress={() => {
+          navigation.navigate('Feed2', { screen: 'Feed2' });
+        }}
+        style={({ pressd }) => [
+          { backgroundColor: pressd ? '#08776c' : '#009688' },
+          styles.btn,
+        ]}
+      >
+        {({ pressd }) => (
+          <Text style={styles.txtBtn}>Go to Feed2 (Nested Screen)</Text>
+        )}
+      </Pressable>
     </View>
   );
 }
